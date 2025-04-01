@@ -1,0 +1,149 @@
+.container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  .container {
+    height: auto;
+    padding: 20px 0;
+  }
+}
+
+.carouselWrapper {
+  margin-top: 5rem;
+  width: 100%;
+  position: relative;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  .carouselWrapper {
+    margin-top: 3rem;
+  }
+}
+
+.slide {
+  width: 100%;
+  height: 500px;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  .slide {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide {
+    height: 250px;
+  }
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Logo centrado sobre el carrusel */
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  opacity: 0.9;
+  transition: opacity 0.5s ease-in-out;
+  max-width: 300px; /* Ajuste del tamaño del logo */
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    max-width: 150px;
+  }
+}
+
+/* Nueva sección con fondo degradado */
+.description {
+  width: 100%;
+  padding: 50px 20px;
+  text-align: center;
+  background: radial-gradient(circle, #1a1a1a, #0d0d0d);
+  color: white;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  .description {
+    padding: 40px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .description {
+    padding: 30px 10px;
+  }
+}
+
+.description h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  .description h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .description h2 {
+    font-size: 20px;
+  }
+}
+
+.description p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  opacity: 0.9;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  .description p {
+    font-size: 16px;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .description p {
+    font-size: 14px;
+    max-width: 90%;
+  }
+}

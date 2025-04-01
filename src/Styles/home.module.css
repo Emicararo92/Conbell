@@ -1,0 +1,52 @@
+.animated-bg {
+  animation: gradientAnimation 15s infinite linear;
+  background-size: 200% 200%;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Añadido para mejorar el espaciado en móviles */
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  .animated-bg {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-bg {
+    padding: 10px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px; /* Controla el ancho de los elementos */
+  padding: 0 20px; /* Espaciado en los costados */
+}
+
+/* Ajustes responsive */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 95%;
+    padding: 0 10px;
+  }
+}

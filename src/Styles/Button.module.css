@@ -1,0 +1,70 @@
+.callButton {
+  background-color: white;
+  border-radius: 2rem;
+  color: black;
+  padding: 1rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  font-size: 1rem; /* Ajuste base */
+}
+
+.callButton:hover {
+  background-color: black;
+  color: white;
+  border: solid 0.5px whitesmoke;
+  transition: all 0.5s;
+}
+
+.phoneIcon {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.callContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .callButton {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .phoneIcon {
+    font-size: 1.2rem;
+  }
+
+  .callContainer {
+    flex-direction: column;
+  }
+}
+
+.moreButtonContainer {
+  background-color: black;
+  border: solid 0.5px whitesmoke;
+  border-radius: 0.5rem;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .moreButtonContainer {
+    width: 100%;
+    max-width: 300px;
+  }
+}

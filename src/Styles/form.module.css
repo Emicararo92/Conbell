@@ -1,0 +1,126 @@
+.wrapper {
+  max-width: 25%;
+  margin: auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes responsive */
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    max-width: 95%;
+    padding: 15px;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #333;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #666;
+  margin: 5px 0 0;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+}
+
+/* Distribución en grid */
+.div1, .div2, .div3, .div4, .div5 {
+  grid-column: span 1;
+}
+
+/* Ajuste en pantallas pequeñas: una sola columna */
+@media (max-width: 768px) {
+  .parent {
+    grid-template-columns: 1fr;
+  }
+
+  .div1, .div2, .div3, .div4, .div5 {
+    grid-column: span 1;
+  }
+}
+
+/* Estilos para inputs y select */
+.input,
+.select {
+  color: #333;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Contenedor del logo */
+.logoContainer {
+  margin-top: 20px;
+  background: #000;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilo del logo */
+.logo {
+  object-fit: contain;
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+
+/* Botón de enviar */
+.buttonContainer {
+  margin-top: 20px;
+}
+
+.button {
+  background: white;
+  color: black;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  width: 100%;
+}
+
+/* Ajuste responsive para el botón */
+@media (max-width: 480px) {
+  .button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+.button:hover {
+  background: black;
+  color: white;
+}

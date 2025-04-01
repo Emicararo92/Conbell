@@ -1,0 +1,161 @@
+.wrapper {
+  max-width: 75%;
+  margin: auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 5.01rem;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    max-width: 95%;
+    padding: 15px;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #333;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #666;
+  margin: 5px 0 0;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+}
+
+.div1,
+.div2,
+.div3,
+.div4,
+.div5 {
+  grid-column: span 1;
+}
+
+@media (max-width: 768px) {
+  .parent {
+    grid-template-columns: 1fr;
+  }
+
+  .div1,
+  .div2,
+  .div3,
+  .div4,
+  .div5 {
+    grid-column: span 1;
+  }
+}
+
+.input,
+.select {
+  color: rgb(75, 73, 73);
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.logoContainer {
+  margin-top: 20px;
+  background: #000;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  object-fit: contain;
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+
+.buttonContainer {
+  margin-top: 20px;
+}
+
+.button {
+  background: white;
+  color: black;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+.button:hover {
+  background: black;
+  color: white;
+}
+
+.Banner {
+  margin-top: 4rem;
+  position: relative;
+  height: 300px;
+  background-image: url("https://res.cloudinary.com/diefdex1h/image/upload/v1741978779/CASASANTINANORTE_PHLAUKALBER_2_t8mhxt.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bannerContent {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.bannerTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.bannerSubtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
