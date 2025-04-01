@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import styles from "../../../Styles/formPage.module.css";
 import logo from "../../../../public/logow.png";
