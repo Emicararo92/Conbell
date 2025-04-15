@@ -67,13 +67,13 @@ function NavBar() {
                 Nuestra Historia
               </a>
               <a
-                href="#vendedores"
+                href="Vendedores"
                 className="text-black hover:bg-gray-100 p-2 block"
               >
                 Vendedores
               </a>
               <a
-                href="#fabrica"
+                href="Fabrica"
                 className="text-black hover:bg-gray-100 p-2 block"
               >
                 Fábrica
@@ -119,7 +119,7 @@ function NavBar() {
       >
         <div className="flex flex-col space-y-6">
           <a
-            href="/Showroom"
+            href="Showroom"
             className="text-lg font-semibold text-black hover:text-gray-600 py-2"
             onClick={closeMenu}
           >
@@ -149,14 +149,14 @@ function NavBar() {
                 Nuestra Historia
               </a>
               <a
-                href="#vendedores"
+                href="Vendedores"
                 className="text-black hover:bg-gray-100 p-2 block rounded"
                 onClick={closeMenu}
               >
                 Vendedores
               </a>
               <a
-                href="#fabrica"
+                href="Fabrica"
                 className="text-black hover:bg-gray-100 p-2 block rounded"
                 onClick={closeMenu}
               >

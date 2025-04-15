@@ -29,10 +29,7 @@ export default function Preloader({ onFinish }: { onFinish: () => void }) {
         height={120}
         className="mb-6"
       />
-      <h1 className="text-4xl font-bold mb-2 animate-fade-in">
-        Bienvenido a Conbell
-      </h1>
-      <p className="text-lg mb-6">Cargando experiencia de lujo...</p>
+
       <GiHammerNails className="text-5xl animate-bounce" />
     </div>
   );
