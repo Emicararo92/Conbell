@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import logoBlack from "../../../public/logob.png";
+import logoBlack from "../../../public/logod.png";
 import { IoMenu, IoClose } from "react-icons/io5";
 
 function NavBar() {
@@ -101,7 +101,7 @@ function NavBar() {
                 ¿Te llamamos?
               </a>
               <a
-                href="#como-llegar"
+                href="ComoLlegar"
                 className="text-black hover:bg-gray-100 p-2 block"
               >
                 ¿Cómo llegar?
@@ -181,14 +181,14 @@ function NavBar() {
               } pl-4 space-y-3 mt-2`}
             >
               <a
-                href="#contact-form"
+                href="Contact"
                 className="text-black hover:bg-gray-100 p-2 block rounded"
                 onClick={closeMenu}
               >
                 ¿Te llamamos?
               </a>
               <a
-                href="#como-llegar"
+                href="ComoLlegar"
                 className="text-black hover:bg-gray-100 p-2 block rounded"
                 onClick={closeMenu}
               >

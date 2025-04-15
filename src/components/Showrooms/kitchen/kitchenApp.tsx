@@ -82,7 +82,7 @@ const KitchenApp: React.FC<KitchenAppProps> = ({ slidesPerView = 1 }) => {
       {/* Banner de bienvenida */}
       <div className={styles.bannerContainer}>
         <div className={styles.bannerText}>
-          <h2 className={styles.bannerTitle}>Bienvenido a ConBell</h2>
+          <h2 className={styles.bannerTitle}>Esto es ConBell</h2>
           <p className={styles.bannerSubtitle}>
             Personaliza tu hogar, dale elegacia y estilo.
           </p>
@@ -179,7 +179,7 @@ const KitchenApp: React.FC<KitchenAppProps> = ({ slidesPerView = 1 }) => {
                     layout="fill"
                     objectFit="cover"
                     unoptimized={true}
-                    className={styles.image}
+                    className={styles.image2}
                   />
                 </div>
               </SwiperSlide>
