@@ -16,10 +16,10 @@ export default function Home() {
     AOS.init({ duration: 1000 });
 
     const timer = setTimeout(() => {
-      setIsLoading(false); 
-    }, 1000); 
+      setIsLoading(false);
+    }, 1000);
 
-    return () => clearTimeout(timer); 
+    return () => clearTimeout(timer);
   }, []);
 
   if (isLoading) {
@@ -41,15 +41,17 @@ export default function Home() {
       <div data-aos="fade-left" className="px-4 py-4">
         <Kitchen />
       </div>
-      <DivLine />
+      <div data-aos="fade-down" className="px-4 py-4">
+        <DivLine />
+      </div>
       <div data-aos="fade-left" className="px-4 py-4">
         <WhyUs />
       </div>
-      <div data-aos="fade-right" className="px-4 py-4">
-        <Form />
-      </div>
       <div data-aos="fade-down" className="px-4 py-4">
         <DivLine />
+      </div>
+      <div data-aos="fade-right" className="px-4 py-4">
+        <Form />
       </div>
     </div>
   );
