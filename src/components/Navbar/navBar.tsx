@@ -61,7 +61,7 @@ function NavBar() {
               } absolute bg-white shadow-lg rounded-lg p-2 space-y-2 w-40 top-8 left-0`}
             >
               <a
-                href="#nuestra-historia"
+                href="Historia"
                 className="text-black hover:bg-gray-100 p-2 block"
               >
                 Nuestra Historia
@@ -119,7 +119,7 @@ function NavBar() {
       >
         <div className="flex flex-col space-y-6">
           <a
-            href="/Kitchen"
+            href="/Showroom"
             className="text-lg font-semibold text-black hover:text-gray-600 py-2"
             onClick={closeMenu}
           >

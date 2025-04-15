@@ -2,7 +2,7 @@ import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="bg-black text-white border-t-4 border-[#b8860b] py-8">
+    <footer className="bg-black mt-8 text-white border-t-4 border-[#b8860b] py-8">
       {/* Versión Mobile: solo iconos */}
       <div className="flex justify-center gap-6 md:hidden">
         <a
