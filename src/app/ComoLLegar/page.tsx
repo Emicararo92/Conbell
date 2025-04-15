@@ -1,9 +1,11 @@
+import Maps from "@/components/Contact/maps/maps";
+
 function Page() {
-    return (
-        <>
-            
-        </>
-    )
+  return (
+    <div>
+      <Maps />
+    </div>
+  );
 }
 
 export default Page;
