@@ -6,7 +6,6 @@
   background: black;
   color: #fff;
   font-family: "Poppins", sans-serif;
-  /* Perspectiva para efecto 3D */
   perspective: 1200px;
   overflow: hidden;
 }
@@ -47,7 +46,6 @@
   animation: fadeInScale 1s ease forwards;
 }
 
-/* Contenedor del carrusel */
 .carouselContainer {
   position: relative;
   padding: 0 20px;
@@ -57,12 +55,10 @@
   color: black;
 }
 
-/* Efecto de profundidad en los slides */
 .slick-slide {
   position: relative;
   transition: transform 0.5s ease, opacity 0.5s ease;
   transform-style: preserve-3d;
-  /* Estado inactivo: se alejan y se escalan ligeramente */
   transform: translateX(0) translateZ(-100px) scale(0.9);
   opacity: 0.7;
   margin: 0 10px;
@@ -92,12 +88,10 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-
   transition: transform 0.3s ease;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Botón de llamada a la acción */
 .ctaButton {
   color: whitesmoke;
   background-color: black;
@@ -112,12 +106,10 @@
 .ctaButton:hover {
   color: black;
   background-color: white;
-
   transform: scale(1.1);
   transition: all 0.5s;
 }
 
-/* Responsive adjustments */
 @media (max-width: 1024px) {
   .kitchenContainer {
     padding: 1.5rem;
@@ -144,8 +136,8 @@
 .bannerContainer {
   margin-top: 4rem;
   position: relative;
-  height: 300px; /* Puedes ajustar la altura del banner */
-  background-image: url("https://res.cloudinary.com/diefdex1h/image/upload/v1741978779/CASASANTINANORTE_PHLAUKALBER_2_t8mhxt.jpg"); /* Aquí pones la URL de la imagen que quieras como fondo */
+  height: 300px;
+  background-image: url("https://res.cloudinary.com/diefdex1h/image/upload/v1741978779/CASASANTINANORTE_PHLAUKALBER_2_t8mhxt.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -159,7 +151,7 @@
 }
 
 .bannerText {
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro para el texto */
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 20px;
   border-radius: 8px;
 }
@@ -178,7 +170,7 @@
 .bannerContainerDos {
   margin-top: 4rem;
   position: relative;
-  height: 300px; /* Puedes ajustar la altura del banner */
+  height: 300px;
   background-image: url("https://res.cloudinary.com/diefdex1h/image/upload/v1741978783/CASASANTINANORTE_PHLAUKALBER_9_oum4h8.jpg"); /* Aquí pones la URL de la imagen que quieras como fondo */
   background-size: cover;
   background-position: center;
@@ -193,7 +185,7 @@
 }
 
 .bannerTextDos {
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro para el texto */
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 20px;
   border-radius: 8px;
 }
@@ -209,7 +201,6 @@
   font-weight: 300;
 }
 
-/* Resto de los estilos */
 .kitchenContainer {
   max-width: 1400px;
   margin: 0 auto;

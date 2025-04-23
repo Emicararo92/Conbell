@@ -67,10 +67,10 @@ function NavBar() {
                 Nuestra Historia
               </a>
               <a
-                href="Vendedores"
+                href="Local"
                 className="text-black hover:bg-gray-100 p-2 block"
               >
-                Vendedores
+                Nuestro Local
               </a>
               <a
                 href="Fabrica"
@@ -149,11 +149,11 @@ function NavBar() {
                 Nuestra Historia
               </a>
               <a
-                href="Vendedores"
+                href="Local"
                 className="text-black hover:bg-gray-100 p-2 block rounded"
                 onClick={closeMenu}
               >
-                Vendedores
+                Nuestro Local
               </a>
               <a
                 href="Fabrica"
