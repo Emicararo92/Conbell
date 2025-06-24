@@ -41,10 +41,16 @@ function NavBar() {
         <div className="hidden lg:flex flex-grow justify-end space-x-6">
           {/* Link Showrooms */}
           <a
-            href="/Showroom"
+            href="/Local"
             className="text-lg font-semibold hover:text-gray-600"
           >
             Showrooms
+          </a>
+          <a
+            href="/Local"
+            className="text-lg font-semibold hover:text-gray-600"
+          >
+            Linea de Productos
           </a>
 
           {/* Dropdown: Nosotros */}
@@ -66,12 +72,7 @@ function NavBar() {
               >
                 Nuestra Historia
               </a>
-              <a
-                href="Local"
-                className="text-black hover:bg-gray-100 p-2 block"
-              >
-                Nuestro Local
-              </a>
+
               <a
                 href="Fabrica"
                 className="text-black hover:bg-gray-100 p-2 block"
@@ -148,13 +149,7 @@ function NavBar() {
               >
                 Nuestra Historia
               </a>
-              <a
-                href="Local"
-                className="text-black hover:bg-gray-100 p-2 block rounded"
-                onClick={closeMenu}
-              >
-                Nuestro Local
-              </a>
+
               <a
                 href="Fabrica"
                 className="text-black hover:bg-gray-100 p-2 block rounded"
