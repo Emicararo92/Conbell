@@ -1,45 +1,246 @@
-.contenedor {
-  display: grid;
-  gap: 4rem;
+/* Contenedor principal */
+.timelineWrapper {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  margin-top: 5rem;
+  margin: 9rem auto 0;
+  padding: 40px 20px;
+  position: relative;
 }
 
-.bloque {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+/* Línea de tiempo */
+.timelineTrack {
+  position: relative;
+  width: 100%;
+  height: 80px; /* Altura ajustada */
+  margin: 0 auto 60px;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 40px; /* Centrado verticalmente */
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #ddd;
+  z-index: 1;
+}
+
+/* Contenedor de puntos */
+.timelineDotsContainer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 calc(8px + 1.5%);
+}
+
+/* Puntos interactivos - CENTRADOS SOBRE LA LÍNEA */
+.timelineDot {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #b8860b;
+  border: 3px solid white;
+  transform: translateY(40px) translateX(-50%); /* Alineación precisa */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Años con estados interactivos */
+.yearLabel {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #b8860b;
+  font-weight: 700;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: max-content;
+}
+
+/* Estilo para año seleccionado */
+.activeYear {
+  color: #5a2d0c;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(139, 69, 19, 0.15);
+}
+
+/* Puntos activos/hover */
+.timelineDot:hover,
+.activeDot {
+  background: #5a2d0c;
+  transform: translateY(40px) translateX(-50%) scale(1.4);
+  box-shadow: 0 4px 8px rgba(139, 69, 19, 0.2);
+}
+
+/* Contenido */
+.contentContainer {
+  display: flex;
+  gap: 50px;
   align-items: center;
-  gap: 2rem;
+  width: 100%;
+  margin: 50px auto 0;
 }
 
-.imagen {
-  border: 4px solid #b8860b;
-  border-radius: 8px;
+.imageWrapper {
+  flex: 1;
+  min-height: 350px;
+  position: relative;
+  border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
-.texto {
-  color: white;
-  font-size: 1rem;
-  line-height: 1.6;
+.timelineImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-.invertido {
-  grid-template-columns: 1fr 1fr !important; /* Garantiza que el contenido se invierta */
+.timelineImage:hover {
+  transform: scale(1.05);
 }
 
-.invertido .texto {
-  direction: ltr;
+.textContent {
+  flex: 1;
+  padding: 0 30px;
 }
 
-@media screen and (max-width: 768px) {
-  .bloque {
-    grid-template-columns: 1fr; /* Para móviles, cada bloque es una columna */
+.textContent h3 {
+  font-size: 2rem;
+  color: #5a2d0c;
+  margin-bottom: 1.8rem;
+  position: relative;
+  line-height: 1.3;
+}
+
+.textContent h3::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 70px;
+  height: 4px;
+  background: #b8860b;
+  border-radius: 2px;
+}
+
+.textContent p {
+  line-height: 1.8;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.timelineImage,
+.textContent {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .contentContainer {
+    gap: 40px;
   }
 
-  .invertido {
-    grid-template-columns: 1fr;
+  .imageWrapper {
+    min-height: 300px;
+  }
+
+  .textContent h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .timelineWrapper {
+    padding: 40px 15px;
+  }
+
+  .timelineTrack {
+    height: 70px;
+    margin-bottom: 50px;
+  }
+
+  .timelineLine {
+    top: 35px;
+  }
+
+  .timelineDot {
+    width: 16px;
+    height: 16px;
+    transform: translateY(35px) translateX(-50%);
+  }
+
+  .timelineDot:hover,
+  .activeDot {
+    transform: translateY(35px) translateX(-50%) scale(1.4);
+  }
+
+  .yearLabel {
+    top: -25px;
+    font-size: 1rem;
+  }
+
+  .activeYear {
+    font-size: 1.2rem;
+  }
+
+  .contentContainer {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    min-height: 250px;
+  }
+
+  .textContent {
+    padding: 0;
+    text-align: center;
+  }
+
+  .textContent h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .timelineDot {
+    width: 14px;
+    height: 14px;
+  }
+
+  .yearLabel {
+    font-size: 0.9rem;
+    top: -22px;
+  }
+
+  .activeYear {
+    font-size: 1.1rem;
+  }
+
+  .textContent h3 {
+    font-size: 1.6rem;
+  }
+
+  .textContent p {
+    font-size: 1rem;
   }
 }

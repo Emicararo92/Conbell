@@ -66,6 +66,8 @@
   font-size: 1rem;
 }
 
+
+
 .timelineSection {
   width: 100%;
   max-width: 1200px;
@@ -89,7 +91,6 @@
   font-size: 1rem;
 }
 
-/* RESPONSIVE */
 @media screen and (max-width: 768px) {
   .video {
     max-height: 50vh;
@@ -123,6 +124,18 @@
 
   .timelineSection {
     padding: 0.5rem;
+  }
+
+  .highlightSection {
+    padding: 1.5rem;
+  }
+
+  .highlightSection h2 {
+    font-size: 1.5rem;
+  }
+
+  .highlightSection p {
+    font-size: 1rem;
   }
 }
 

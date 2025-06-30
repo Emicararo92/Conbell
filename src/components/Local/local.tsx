@@ -71,29 +71,30 @@ const Local = () => {
 
   const [isMobile, setIsMobile] = useState(false);
 
-  // Detectar si estamos en mobile o no
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
     window.addEventListener("resize", handleResize);
-    handleResize(); // Llamar una vez al principio
+    handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Iniciar Keen Slider solo en mobile
   const [sliderRef] = useKeenSlider({
     loop: true,
-    spacing: 15,
+    slides: {
+      spacing: 15,
+    },
     created: (slider) => {
       setInterval(() => {
         slider.next();
-      }, 3000); // Autoplay cada 3 segundos
+      }, 3000);
     },
     breakpoints: {
       "(max-width: 767px)": {
         slides: {
-          perView: 1, // En móvil, solo se muestra un slide a la vez
+          perView: 1,
+          spacing: 15,
         },
       },
     },
@@ -156,7 +157,6 @@ const Local = () => {
       <section className={styles.timelineSection}>
         <div className={styles.carouselWrapper}>
           {isMobile ? (
-            // Keen Slider en mobile
             <div ref={sliderRef} className="keen-slider">
               {imageUrls.map((item, index) => (
                 <div key={index} className="keen-slider__slide">
@@ -174,7 +174,6 @@ const Local = () => {
               ))}
             </div>
           ) : (
-            // Swiper en desktop
             <Swiper
               effect="flip"
               grabCursor
@@ -207,6 +206,11 @@ const Local = () => {
             </Swiper>
           )}
         </div>
+      </section>
+      {/* BLOQUE DESTACADO */}
+      <section className="text-black border-s-2" >
+        <h2>CONOCÉ NUESTRO ESPACIO EN FOA</h2>
+        <p>Innovación, diseño y calidad en cada rincón. Vení a descubrirlo.</p>
       </section>
     </div>
   );

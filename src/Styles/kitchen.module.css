@@ -6,11 +6,10 @@
   align-items: center;
   justify-content: center;
   padding: 50px 0;
-  background: black;
   width: 100vw;
   min-height: 100vh;
   overflow: hidden;
-  color: white;
+  color: black;
   gap: 1rem;
   position: relative;
 }
@@ -40,15 +39,6 @@
   pointer-events: none;
 }
 
-.kitchenSection::before {
-  top: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-}
-
-.kitchenSection::after {
-  bottom: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-}
 
 .carouselContainer {
   width: 95%;

@@ -1,15 +1,16 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Roboto, Montserrat } from "next/font/google";
 import "./globals.css";
 import NavBar from "../components/Navbar/navBar";
 import Footer from "@/components/footer/footer";
 
-const geistSans = Geist({
+const geistSans = Roboto({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
+const geistMono = Montserrat({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
