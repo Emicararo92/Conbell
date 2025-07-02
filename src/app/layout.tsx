@@ -4,6 +4,7 @@ import { Geist, Geist_Mono, Roboto, Montserrat } from "next/font/google";
 import "./globals.css";
 import NavBar from "../components/Navbar/navBar";
 import Footer from "@/components/footer/footer";
+import Chat from "../components/chat/chat"; // <-- importa el chat
 
 const geistSans = Roboto({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
         <NavBar />
         <div>{children}</div>
         <Footer />
+        <Chat />
       </body>
     </html>
   );
