@@ -13,7 +13,7 @@ import "swiper/css";
 import "swiper/css/effect-flip";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import styles from "../../styles/local.module.css";
+import styles from "../../Styles/local.module.css";
 import Image from "next/image";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
@@ -208,7 +208,7 @@ const Local = () => {
         </div>
       </section>
       {/* BLOQUE DESTACADO */}
-      <section className="text-black border-s-2" >
+      <section className="text-black border-s-2">
         <h2>CONOCÉ NUESTRO ESPACIO EN FOA</h2>
         <p>Innovación, diseño y calidad en cada rincón. Vení a descubrirlo.</p>
       </section>
