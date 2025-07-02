@@ -13,8 +13,8 @@ import "swiper/css";
 import "swiper/css/effect-flip";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import styles from "../../../Styles/local.module.css";
 import Image from "next/image";
+import styles from "../../Styles/Local.module.css";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
